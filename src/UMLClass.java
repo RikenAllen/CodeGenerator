@@ -5,7 +5,7 @@ public class UMLClass {
     private String value = null;
     private boolean ab = false;
     private String superClassId = null;
-    private ArrayList<String> contains = new ArrayList<>();
+    private ArrayList<UMLClass> contains = new ArrayList<>();
 
     public UMLClass(String id, String value, boolean ab) {
         this.id = id;
@@ -29,7 +29,7 @@ public class UMLClass {
         return ab;
     }
 
-    public ArrayList<String> getContains() {
+    public ArrayList<UMLClass> getContains() {
         return contains;
     }
 
@@ -37,7 +37,7 @@ public class UMLClass {
         this.superClassId = superClassId;
     }
 
-    public void addComposition(String subclassID) {
-        contains.add(subclassID);
+    public void addComposition(UMLClass c) {
+        contains.add(c);
     }
 }

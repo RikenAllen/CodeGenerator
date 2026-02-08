@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.7">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.8">
   <diagram name="Page-1" id="h0SrJN7KkZaKrgkwrvzy">
-    <mxGraphModel dx="1429" dy="853" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="800" math="0" shadow="0">
+    <mxGraphModel dx="1000" dy="597" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="800" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -34,7 +34,7 @@
         <mxCell id="UaMpOoC0N6gdeH3Q_NDl-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Employee" vertex="1">
           <mxGeometry height="60" width="120" x="460" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="UaMpOoC0N6gdeH3Q_NDl-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Food Item" vertex="1">
+        <mxCell id="UaMpOoC0N6gdeH3Q_NDl-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="FoodItem" vertex="1">
           <mxGeometry height="60" width="120" x="220" y="320" as="geometry" />
         </mxCell>
         <mxCell id="UaMpOoC0N6gdeH3Q_NDl-22" edge="1" parent="1" source="UaMpOoC0N6gdeH3Q_NDl-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="UaMpOoC0N6gdeH3Q_NDl-16">

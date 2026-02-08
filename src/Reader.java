@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Reader {
@@ -16,8 +17,6 @@ public class Reader {
             String currentValue = "";
 
             while ((line = reader.readLine()) != null) {
-            // Enter logic here
-                System.out.println(line);
                 // This is a class
                 if (line.contains("vertex=")) {
                     currentId = extractID(line);
@@ -36,7 +35,6 @@ public class Reader {
             String line;
 
             while ((line = reader.readLine()) != null) {
-                System.out.println(line);
                 if (line.contains("source=") && !line.contains("shape=flexArrow")) {
                     inheritanceRelationship(line);
                 }
@@ -50,7 +48,6 @@ public class Reader {
             String line;
 
             while ((line = reader.readLine()) != null) {
-                System.out.println(line);
                 if (line.contains("source=") && line.contains("shape=flexArrow")) {
                     compositionRelationship(line);
                 }
@@ -134,22 +131,16 @@ public class Reader {
                 curSub = classes.get(i);
             }
         }
-        System.out.println("Superclass ID: " + curSuper.getId() + " Superclass value: " + curSuper.getValue());
-        System.out.println("Subclass ID: " + curSub.getId() + "Subclass Value: " + curSub.getValue());
+
         if (curSub.isAb()) {
             for (int i = 0; i < classes.size(); i++) {
-                System.out.println(classes.get(i).getSuperClassId());
-                if (classes.get(i).getSuperClassId() != null) {
-                    System.out.println(classes.get(i).getSuperClassId());
-                    System.out.println(classes.get(i).getSuperClassId().equals(curSub.getId()));
-                }
                 if (classes.get(i).getSuperClassId() != null && classes.get(i).getSuperClassId().equals(curSub.getId())) {
-                    curSuper.addComposition(classes.get(i).getId());
+                    curSuper.addComposition(classes.get(i));
                 }
             }
         }
         else {
-            curSuper.addComposition(curSub.getId());
+            curSuper.addComposition(curSub);
         }
 
     }
@@ -181,9 +172,64 @@ public class Reader {
         }
     }
 
+    private String generateJavaCode(UMLClass c) {
+        StringBuilder sb = new StringBuilder();
+
+        // class header
+        if (c.isAb()) {
+            sb.append("public abstract class ");
+        } else {
+            sb.append("public class ");
+        }
+
+        sb.append(c.getValue());
+
+        // inheritance
+        if (c.getSuperClassId() != null) {
+            for (int i = 0; i < classes.size(); i++) {
+                if (c.getSuperClassId().equals(classes.get(i).getId())) {
+                    sb.append(" extends ").append(classes.get(i).getValue());
+                }
+            }
+
+        }
+
+        sb.append(" {\n\n");
+
+        // composition → fields
+        for (int i = 0; i < c.getContains().size(); i++) {
+            sb.append("    private ")
+                    .append(c.getContains().get(i).getClass())
+                    .append(" ")
+                    .append((c.getContains().get(i).getValue()))
+                    .append(";\n");
+        }
+
+        sb.append("\n}");
+
+        return sb.toString();
+    }
+
+    public void generateAll() {
+        for (int i = 0; i < classes.size(); i++) {
+            String code = generateJavaCode(classes.get(i));
+            writeToFile(classes.get(i).getValue() + ".java", code);
+        }
+    }
+
+    private void writeToFile(String fileName, String content) {
+        try (PrintWriter out = new PrintWriter("C:\\Users\\Riken\\Documents\\2AA4\\CodeGenerator\\GeneratedCode\\" + fileName)) {
+            out.println(content);
+        } catch (IOException e) {
+            System.out.println("Failed to write " + fileName);
+        }
+    }
+
+
     public static void main(String[] args) {
         Reader r = new Reader();
 
         r.readFile("C:\\Users\\Riken\\Documents\\2AA4\\CodeGenerator\\Diagrams\\Restaurant.drawio");
+        r.generateAll();
     }
 }
