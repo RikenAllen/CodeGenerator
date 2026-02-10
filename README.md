@@ -1,2 +1,2 @@
 # CodeGenerator
-Generates code from pseudo UML diagrams.
+Generates code from pseudo UML diagrams
