@@ -210,26 +210,19 @@ public class Reader {
         return sb.toString();
     }
 
-    public void generateAll() {
+    public void generateAll(String fileDirectory) {
         for (int i = 0; i < classes.size(); i++) {
             String code = generateJavaCode(classes.get(i));
-            writeToFile(classes.get(i).getValue() + ".java", code);
+            writeToFile(classes.get(i).getValue() + ".java", code, fileDirectory);
         }
     }
 
-    private void writeToFile(String fileName, String content) {
-        try (PrintWriter out = new PrintWriter("C:\\Users\\Riken\\Documents\\2AA4\\CodeGenerator\\GeneratedCode\\" + fileName)) {
+    private void writeToFile(String fileName, String content, String fileDirectory) {
+        try (PrintWriter out = new PrintWriter(fileDirectory + fileName)) {
             out.println(content);
         } catch (IOException e) {
             System.out.println("Failed to write " + fileName);
         }
     }
 
-
-    public static void main(String[] args) {
-        Reader r = new Reader();
-
-        r.readFile("C:\\Users\\Riken\\Documents\\2AA4\\CodeGenerator\\Diagrams\\Restaurant.drawio");
-        r.generateAll();
-    }
 }

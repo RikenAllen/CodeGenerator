@@ -1,0 +1,63 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.8">
+  <diagram name="Page-1" id="Foy7MX9VgoJ6f8ARpc75">
+    <mxGraphModel dx="1000" dy="597" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="180" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="A Thing" vertex="1">
+          <mxGeometry height="30" width="60" x="370" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Must have a name (Written inside)" vertex="1">
+          <mxGeometry height="30" width="190" x="500" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="180" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="An Abstract Thing" vertex="1">
+          <mxGeometry height="30" width="100" x="350" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Must have a name (Written inside)" vertex="1">
+          <mxGeometry height="30" width="190" x="500" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;shape=flexArrow;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="215" y="320" as="sourcePoint" />
+            <mxPoint x="265" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-18" connectable="0" parent="pSLEnv8qIktvBXI2rUp2-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Value" vertex="1">
+          <mxGeometry relative="1" x="-0.0867" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&quot;Has a&quot; relationship" vertex="1">
+          <mxGeometry height="30" width="110" x="350" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Must be drawn between two things or abstract things. Must have cardinality denoted with &quot;()&quot; and a single direction. Source of arrow is the superclass." vertex="1">
+          <mxGeometry height="30" width="190" x="500" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&quot;Is a&quot; relationship" vertex="1">
+          <mxGeometry height="30" width="100" x="350" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Must be drawn between two things or abstract things. Must have a single direction. Target of the arrow is superclass." vertex="1">
+          <mxGeometry height="30" width="190" x="500" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="pSLEnv8qIktvBXI2rUp2-17" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="215" y="410" as="sourcePoint" />
+            <mxPoint x="265" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VLk9qIjsCDVY_TTmU-tG-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Rules" vertex="1">
+          <mxGeometry height="30" width="215" x="487.5" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VLk9qIjsCDVY_TTmU-tG-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Syntax" vertex="1">
+          <mxGeometry height="30" width="215" x="293" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
