@@ -1,7 +1,7 @@
 public class Computer {
 
-    private class UMLClass CPU;
-    private class UMLClass GPU;
-    private class UMLClass RAM;
+    private CPU cpu;
+    private GPU gpu;
+    private RAM ram;
 
 }

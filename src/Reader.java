@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
+
 public class Reader {
 
     private ArrayList<UMLClass> classes = new ArrayList<>();
@@ -199,9 +200,9 @@ public class Reader {
         // composition → fields
         for (int i = 0; i < c.getContains().size(); i++) {
             sb.append("    private ")
-                    .append(c.getContains().get(i).getClass())
+                    .append(c.getContains().get(i).getValue())
                     .append(" ")
-                    .append((c.getContains().get(i).getValue()))
+                    .append(((c.getContains().get(i).getValue())).toLowerCase())
                     .append(";\n");
         }
 
