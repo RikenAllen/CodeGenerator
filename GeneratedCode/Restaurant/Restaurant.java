@@ -1,8 +1,8 @@
 public class Restaurant {
 
-    private class UMLClass Chef;
-    private class UMLClass Waiter;
-    private class UMLClass Manager;
-    private class UMLClass Menu;
+    private Chef chef;
+    private Waiter waiter;
+    private Manager manager;
+    private Menu menu;
 
 }

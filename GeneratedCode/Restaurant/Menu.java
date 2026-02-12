@@ -1,5 +1,5 @@
 public class Menu {
 
-    private class UMLClass Pizza;
+    private Pizza pizza;
 
 }
