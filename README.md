@@ -18,7 +18,7 @@ The CodeGenerator reads XML-based diagram files and converts visual components�
 
 ---
 
-## 📏 Diagram Syntax Rules
+##  Diagram Syntax Rules
 
 To ensure successful code generation, diagrams must follow specific visual rules defined in the system legend:
 
@@ -29,7 +29,7 @@ To ensure successful code generation, diagrams must follow specific visual rules
 
 ---
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
 ### 1. Clone the Repository
 
